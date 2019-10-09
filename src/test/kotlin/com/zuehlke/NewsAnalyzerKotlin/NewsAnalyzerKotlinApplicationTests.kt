@@ -10,11 +10,5 @@ import org.springframework.test.context.junit4.SpringRunner
 class NewsAnalyzerKotlinApplicationTests {
 
 	@Test
-	fun contextLoads() {
-		val numbers = mutableListOf(1, 2, 3)
-		numbers.filter(::isOdd)
-	}
-
-	fun isOdd(x: Int) = x %2 != 0
-
+	fun contextLoads() {}
 }
