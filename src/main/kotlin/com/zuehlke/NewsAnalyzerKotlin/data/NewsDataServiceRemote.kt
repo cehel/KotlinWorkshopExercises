@@ -1,8 +1,7 @@
 package com.zuehlke.RedditAnalyzerKotlin.service
 
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
+import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 import org.springframework.http.*
-import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.exchange
 import java.lang.Exception
@@ -11,7 +10,7 @@ import java.util.*
 
 /* Created by celineheldner on 2019-10-06 */
 
-class NewsServiceRemote(val apiKey:String, val baseUrl: String): NewsService {
+class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataService {
 
     val entity: HttpEntity<String>
     val restTemplate = RestTemplate()
@@ -22,6 +21,9 @@ class NewsServiceRemote(val apiKey:String, val baseUrl: String): NewsService {
         entity = HttpEntity(headers)
     }
 
+    /*
+    TODO: Exercise 1: This method should return the type NewsArticle instead of a String
+     */
     override fun fetchNews(): String {
         val response: ResponseEntity<String> = restTemplate.exchange(
                 url = "${baseUrl}?sources=bbc-news&apiKey=${apiKey}",

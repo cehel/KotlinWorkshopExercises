@@ -1,18 +1,17 @@
 package com.zuehlke.RedditAnalyzerKotlin.service
 
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
-import org.springframework.http.*
-import org.springframework.stereotype.Service
-import org.springframework.web.client.RestTemplate
-import org.springframework.web.client.exchange
-import java.lang.Exception
-import java.util.*
+import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 
 
 /* Created by celineheldner on 2019-10-06 */
 
-class NewsServiceLocal: NewsService {
+class NewsDataServiceLocal: NewsDataService {
 
+    /*
+    TODO: Exercise 1:
+     This method should return a type NewsArticle instead of String
+     Create a dummy NewsArticle for testing without internet connection
+     */
     override fun fetchNews(): String {
        return "{\n" +
                "  \"status\": \"ok\",\n" +

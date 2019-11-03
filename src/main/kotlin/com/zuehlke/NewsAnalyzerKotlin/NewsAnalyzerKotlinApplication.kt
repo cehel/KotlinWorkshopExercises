@@ -1,8 +1,8 @@
 package com.zuehlke.RedditAnalyzerKotlin
 
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
-import com.zuehlke.RedditAnalyzerKotlin.service.NewsServiceLocal
-import com.zuehlke.RedditAnalyzerKotlin.service.NewsServiceRemote
+import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
+import com.zuehlke.RedditAnalyzerKotlin.service.NewsDataServiceLocal
+import com.zuehlke.RedditAnalyzerKotlin.service.NewsDataServiceRemote
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -20,11 +20,11 @@ class NewsAnalyzerKotlinApplication{
 	lateinit var newsApiBaseUrl: String
 
 	@Bean
-	fun newsService(): NewsService {
+	fun newsService(): NewsDataService {
 		if ( "true"==isMock ) {
-			return NewsServiceLocal()
+			return NewsDataServiceLocal()
 		}
-		return NewsServiceRemote(apiKey = newsApiKey, baseUrl = newsApiBaseUrl)
+		return NewsDataServiceRemote(apiKey = newsApiKey, baseUrl = newsApiBaseUrl)
 	}
 }
 
