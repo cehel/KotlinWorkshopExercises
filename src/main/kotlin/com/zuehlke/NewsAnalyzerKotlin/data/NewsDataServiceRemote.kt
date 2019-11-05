@@ -5,6 +5,7 @@ import org.springframework.http.*
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.exchange
 import java.lang.Exception
+import java.net.URI
 import java.util.*
 
 
@@ -12,13 +13,15 @@ import java.util.*
 
 class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataService {
 
-    val entity: HttpEntity<String>
+    val entity: RequestEntity<String>
     val restTemplate = RestTemplate()
 
     init {
         val headers =  HttpHeaders()
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON))
-        entity = HttpEntity(headers)
+        val endpoint = URI.create("${baseUrl}?sources=bbc-news&apiKey=${apiKey}")
+        entity = RequestEntity(HttpMethod.GET, endpoint)
+        //entity = HttpEntity(headers)
     }
 
     /*
