@@ -25,9 +25,7 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
         entity = RequestEntity(HttpMethod.GET, endpoint)
     }
 
-    /*
-    TODO: Exercise 1: This method should return the type NewsArticle instead of a String
-     */
+
     override fun fetchNews(): NewsArticle {
         val respType = object: ParameterizedTypeReference<NewsArticle>(){}
 
