@@ -1,5 +1,6 @@
 package com.zuehlke.RedditAnalyzerKotlin.service
 
+import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 
 
@@ -12,7 +13,15 @@ class NewsDataServiceLocal: NewsDataService {
      This method should return a type NewsArticle instead of String
      Create a dummy NewsArticle for testing without internet connection
      */
-    override fun fetchNews(): String {
+    override fun fetchNews() : NewsArticle {
+        return NewsArticle(
+                status = "ok",
+                totalResults = 10,
+                articles = listOf()
+                )
+    }
+
+    fun fetchNewsString(): String {
        return "{\n" +
                "  \"status\": \"ok\",\n" +
                "  \"totalResults\": 10,\n" +

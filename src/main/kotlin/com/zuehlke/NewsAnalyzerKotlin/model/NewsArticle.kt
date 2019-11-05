@@ -11,24 +11,24 @@ import java.time.LocalDateTime
 *   2. Create the immutable properties author, title, description, url and content.
 * */
 data class NewsArticle (
-        val status: String,
-        val totlaResults: Int,
-        val articles: List<Article>
+        val status: String? = null,
+        val totalResults: Int? = null,
+        val articles: List<Article> = listOf()
 )
 
 data class Article (
-        val source: ArticleSource,
-        val author: String,
-        val title: String,
-        val description: String,
-        val url: String,
-        val urlToImate: String,
-        val publishedAt: LocalDateTime,
-        val content: String
+        var source: ArticleSource? = null,
+        var author: String? = null,
+        var title: String? = null,
+        var description: String? = null,
+        var url: String? = null,
+        var urlToImage: String? = null,
+        var publishedAt: LocalDateTime? = null,
+        var content: String? = null
 )
 
 data class ArticleSource (
-    val id: String,
-    val name: String
+    var id: String? = null,
+    var name: String? = null
 )
 
