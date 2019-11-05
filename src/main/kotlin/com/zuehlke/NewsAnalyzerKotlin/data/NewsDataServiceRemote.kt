@@ -23,7 +23,6 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON))
         val endpoint = URI.create("${baseUrl}?sources=bbc-news&apiKey=${apiKey}")
         entity = RequestEntity(HttpMethod.GET, endpoint)
-        //entity = HttpEntity(headers)
     }
 
     /*
