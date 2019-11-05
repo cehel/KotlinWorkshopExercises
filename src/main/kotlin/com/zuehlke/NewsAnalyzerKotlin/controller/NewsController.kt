@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RestController
 class NewsController(val service: NewsDataService) {
 
     @GetMapping("/api/news")
-    fun kotlinReddit() = service.fetchNews()
+    fun fetchNews() = service.fetchNews()
 }
