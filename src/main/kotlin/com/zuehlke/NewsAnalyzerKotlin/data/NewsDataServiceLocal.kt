@@ -1,7 +1,7 @@
-package com.zuehlke.RedditAnalyzerKotlin.service
+package com.zuehlke.NewsAnalyzerKotlin.data
 
 import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
+import com.zuehlke.NewsAnalyzerKotlin.data.NewsDataService
 
 
 /* Created by celineheldner on 2019-10-06 */

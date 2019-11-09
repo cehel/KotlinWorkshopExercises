@@ -1,7 +1,7 @@
-package com.zuehlke.RedditAnalyzerKotlin.service
+package com.zuehlke.NewsAnalyzerKotlin.data
 
 import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
+import com.zuehlke.NewsAnalyzerKotlin.data.NewsDataService
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.*
 import org.springframework.web.client.RestTemplate
