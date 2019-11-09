@@ -1,4 +1,4 @@
-package com.zuehlke.NewsAnalyzerKotlin.service.news
+package com.zuehlke.NewsAnalyzerKotlin.data
 
 import org.springframework.http.ResponseEntity
 

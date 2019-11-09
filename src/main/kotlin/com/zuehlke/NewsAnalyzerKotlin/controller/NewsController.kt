@@ -1,6 +1,6 @@
-package com.zuehlke.RedditAnalyzerKotlin
+package com.zuehlke.NewsAnalyzerKotlin.controller
 
-import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
+import com.zuehlke.NewsAnalyzerKotlin.data.NewsDataService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
