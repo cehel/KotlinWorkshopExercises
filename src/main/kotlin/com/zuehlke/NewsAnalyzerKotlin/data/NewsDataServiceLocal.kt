@@ -1,4 +1,4 @@
-package com.zuehlke.RedditAnalyzerKotlin.service
+package com.zuehlke.NewsAnalyzerKotlin.service
 
 import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService

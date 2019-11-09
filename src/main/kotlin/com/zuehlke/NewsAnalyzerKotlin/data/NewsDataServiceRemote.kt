@@ -1,11 +1,10 @@
-package com.zuehlke.RedditAnalyzerKotlin.service
+package com.zuehlke.NewsAnalyzerKotlin.service
 
 import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.*
 import org.springframework.web.client.RestTemplate
-import org.springframework.web.client.exchange
 import java.lang.Exception
 import java.net.URI
 import java.util.*
