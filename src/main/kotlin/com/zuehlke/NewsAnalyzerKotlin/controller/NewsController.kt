@@ -1,5 +1,6 @@
 package com.zuehlke.NewsAnalyzerKotlin.controller
 
+import com.zuehlke.NewsAnalyzerKotlin.model.KeywordSearchResult
 import com.zuehlke.NewsAnalyzerKotlin.service.AnalyzeService
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 import org.springframework.web.bind.annotation.GetMapping
@@ -17,8 +18,8 @@ class NewsController(val newsService: NewsDataService,
     fun fetchNews() = newsService.fetchNews()
 
     @GetMapping("/api/analyze/news")
-    fun analyzeNews(@RequestParam keyword: String) {
+    fun analyzeNews(@RequestParam keyword: String): KeywordSearchResult {
         val newsArticle = newsService.fetchNews()
-        analyzeService.analyzeNewsWithKeyword(newsArticle, keyword)
+        return analyzeService.analyzeNewsWithKeyword(newsArticle, keyword)
     }
 }
