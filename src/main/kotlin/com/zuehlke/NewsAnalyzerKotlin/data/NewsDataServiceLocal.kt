@@ -8,11 +8,6 @@ import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 
 class NewsDataServiceLocal: NewsDataService {
 
-    /*
-    TODO: Exercise 1:
-     This method should return a type NewsArticle instead of String
-     Create a dummy NewsArticle for testing without internet connection
-     */
     override fun fetchNews() : NewsArticle {
         return NewsArticle(
                 status = "ok",
