@@ -7,3 +7,4 @@ package com.zuehlke.NewsAnalyzerKotlin.extensions
 TODO Exercise 2: implement an extension function on String, called countOccurenceOf(keyword:String),
     which returns the number of times the keyword appeared in that String.
  */
+fun String.countOccurenceOf(keyword: String) = this.split("\\s".toRegex()).filter{it == keyword}.count()
