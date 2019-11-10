@@ -17,6 +17,19 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
     val entity: RequestEntity<NewsArticle>
     val restTemplate = RestTemplate()
 
+    /*
+    TODO Exercise 3:
+    It is unnecessary to fetch the news for every incoming request. The response of the news-api should be cached in memory for at least one day.
+    We will store the response in a property of this class. Using property delegation we will create an easy-to-use cache, which can be reused on other properties.
+        1.  Create a property "newsArticle" of type NewsArticle
+        2.  Go to CacheableProperty and implement a Property delegation according to the description there
+        3.  Use the created property delegation on the property "newsArticle", f. ex:
+            val newsArticle by CacheableProperty(24, ::fetchNews())
+
+        4.  For consistency you could change the NewsDataService interface to add the newsArticle property instead of the fetchNews function
+            Then you can make the fetchNews function private and override the property
+     */
+
     init {
         val headers =  HttpHeaders()
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON))
