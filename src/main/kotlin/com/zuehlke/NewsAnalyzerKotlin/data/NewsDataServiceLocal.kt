@@ -8,15 +8,13 @@ import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 
 class NewsDataServiceLocal: NewsDataService {
 
-    override fun fetchNews() : NewsArticle {
-        return NewsArticle(
+    override val newsArticle =NewsArticle(
                 status = "ok",
                 totalResults = 10,
                 articles = listOf()
                 )
-    }
 
-    fun fetchNewsString(): String {
+    private fun fetchNewsString(): String {
        return "{\n" +
                "  \"status\": \"ok\",\n" +
                "  \"totalResults\": 10,\n" +

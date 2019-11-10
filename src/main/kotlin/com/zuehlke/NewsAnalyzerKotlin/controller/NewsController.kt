@@ -15,11 +15,11 @@ class NewsController(val newsService: NewsDataService,
                      val analyzeService: AnalyzeService) {
 
     @GetMapping("/api/news")
-    fun fetchNews() = newsService.fetchNews()
+    fun fetchNews() = newsService.newsArticle
 
     @GetMapping("/api/analyze/news")
     fun analyzeNews(@RequestParam keyword: String): KeywordSearchResult {
-        val newsArticle = newsService.fetchNews()
+        val newsArticle = newsService.newsArticle
         return analyzeService.analyzeNewsWithKeyword(newsArticle, keyword)
     }
 }

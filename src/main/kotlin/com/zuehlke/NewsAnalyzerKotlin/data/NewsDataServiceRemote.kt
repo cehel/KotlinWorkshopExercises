@@ -2,6 +2,7 @@ package com.zuehlke.NewsAnalyzerKotlin.service
 
 import com.zuehlke.NewsAnalyzerKotlin.model.NewsArticle
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
+import com.zuehlke.NewsAnalyzerKotlin.util.CacheableProperty
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.*
 import org.springframework.web.client.RestTemplate
@@ -29,6 +30,8 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
         4.  For consistency you could change the NewsDataService interface to add the newsArticle property instead of the fetchNews function
             Then you can make the fetchNews function private and override the property
      */
+    override val newsArticle: NewsArticle by CacheableProperty(24, ::fetchNews)
+
 
     init {
         val headers =  HttpHeaders()
@@ -38,7 +41,7 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
     }
 
 
-    override fun fetchNews(): NewsArticle {
+    private fun fetchNews(): NewsArticle {
         val respType = object: ParameterizedTypeReference<NewsArticle>(){}
 
         val response: ResponseEntity<NewsArticle> = restTemplate.exchange(
