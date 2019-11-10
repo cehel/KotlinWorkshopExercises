@@ -10,6 +10,13 @@ import java.time.LocalDate
 /* Created by celineheldner on 9/10/19 */
 @Service
 class AnalyzeService {
+    /*
+    TODO Exercise 4:
+    We would like to save in memory all the KeywordSearchResult that have been requested in a Collection
+    We would like to log a message everytime an element has been added to this list
+    Go to LoggableMutableList to implement this class using class delegation
+
+     */
 
     fun analyzeNewsWithKeyword(newsArticle: NewsArticle, keyword: String): KeywordSearchResult{
 
@@ -27,7 +34,6 @@ class AnalyzeService {
         }
 
         return KeywordSearchResult(LocalDate.now(), keyword, totalNbrOfOccurences, presentInNbrOfArticles)
-
     }
 
 }
