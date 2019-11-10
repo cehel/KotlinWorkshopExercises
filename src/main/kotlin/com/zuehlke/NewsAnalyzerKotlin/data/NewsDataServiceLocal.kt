@@ -8,6 +8,7 @@ import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsDataService
 
 class NewsDataServiceLocal: NewsDataService {
 
+    //TODO Exercise 3 use a property instead of a function
     override fun fetchNews() : NewsArticle {
         return NewsArticle(
                 status = "ok",

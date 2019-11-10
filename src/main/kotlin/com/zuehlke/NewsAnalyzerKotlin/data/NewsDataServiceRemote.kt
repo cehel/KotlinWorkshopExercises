@@ -37,7 +37,7 @@ class NewsDataServiceRemote(val apiKey:String, val baseUrl: String): NewsDataSer
         entity = RequestEntity(HttpMethod.GET, endpoint)
     }
 
-
+    //TODO Exercise 3 use the above created property instead of a function, make this function private
     override fun fetchNews(): NewsArticle {
         val respType = object: ParameterizedTypeReference<NewsArticle>(){}
 
