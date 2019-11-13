@@ -1,8 +1,6 @@
-package com.zuehlke.RedditAnalyzerKotlin
+package com.zuehlke.NewsAnalyzerKotlin
 
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
-import com.zuehlke.RedditAnalyzerKotlin.service.NewsServiceRemote
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 

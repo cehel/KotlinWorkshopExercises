@@ -1,4 +1,4 @@
-package com.zuehlke.RedditAnalyzerKotlin
+package com.zuehlke.NewsAnalyzerKotlin
 
 import org.junit.Test
 import org.junit.runner.RunWith

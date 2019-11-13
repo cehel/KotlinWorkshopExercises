@@ -1,8 +1,7 @@
-package com.zuehlke.RedditAnalyzerKotlin.service
+package com.zuehlke.NewsAnalyzerKotlin.service.news
 
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
 import org.springframework.http.*
-import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
 import org.springframework.web.client.exchange
 import java.lang.Exception

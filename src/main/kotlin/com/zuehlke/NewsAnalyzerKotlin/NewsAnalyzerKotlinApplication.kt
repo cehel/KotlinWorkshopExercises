@@ -1,8 +1,9 @@
-package com.zuehlke.RedditAnalyzerKotlin
+package com.zuehlke.NewsAnalyzerKotlin
+
 
 import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsService
-import com.zuehlke.RedditAnalyzerKotlin.service.NewsServiceLocal
-import com.zuehlke.RedditAnalyzerKotlin.service.NewsServiceRemote
+import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsServiceLocal
+import com.zuehlke.NewsAnalyzerKotlin.service.news.NewsServiceRemote
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
