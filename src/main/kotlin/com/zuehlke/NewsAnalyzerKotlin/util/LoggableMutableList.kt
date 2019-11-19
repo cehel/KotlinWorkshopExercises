@@ -5,8 +5,8 @@ package com.zuehlke.NewsAnalyzerKotlin.util
     
 /*
 TODO Exercise 4: Create a a LoggableCollection class
-  it should implements all the features of a MutableCollection
-  additionally to that it should log a message each time a result has been added or removed
+  it should implement all the features of a MutableCollection
+  additionally to that it should log a message each time one or more elements have been added to the list
 
   Use class delegation to implement such a List
 
