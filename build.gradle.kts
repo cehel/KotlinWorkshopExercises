@@ -24,9 +24,11 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("com.h2database:h2:1.3.176")
 	implementation("com.google.code.gson:gson:2.8.6")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
 	testImplementation("org.junit.jupiter:junit-jupiter-params:5.3.1")
+	testImplementation("io.mockk:mockk:1.9")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
 

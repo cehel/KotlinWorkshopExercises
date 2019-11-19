@@ -12,7 +12,7 @@ import kotlin.reflect.KProperty
 
 class CacheableProperty<T>(val durationInHours: Long, val generator: () -> T ) {
 
-    var lastGeneratedTimeInMillis = Long.MIN_VALUE
+    var lastGeneratedTimeInMillis = LocalDateTime.now().toInstant(ZoneOffset.UTC).toEpochMilli()
     val HOURS = 1000L*60L*60L
     var generatedValue: T? = null
 
