@@ -12,7 +12,6 @@ class AnalyzeService {
     fun analyzeNewsWithKeyword(newsArticle: NewsArticle, keyword: String): KeywordSearchResult{
         TODO("Exercise 2")
         /*
-            TODO Exercise 2:
             Check the data class KeywordSearchResult.
             1.  Count the number of occurences of the keyword in the content of the article.
                 To do so, create an extension function in StringExtensions which counts the nbr of keywords in a string.
