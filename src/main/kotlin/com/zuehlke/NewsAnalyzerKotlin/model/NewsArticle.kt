@@ -7,8 +7,8 @@ import java.time.LocalDateTime
 */
 
 data class NewsArticle (
-        val status: String? = null,
-        val totalResults: Int? = null,
+        var status: String? = null,
+        var totalResults: Int? = null,
         val articles: List<Article> = listOf()
 )
 
